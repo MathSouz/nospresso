@@ -7,10 +7,15 @@ import br.com.cwi.nespresso_app.R
 import br.com.cwi.nespresso_app.databinding.ActivityBagBinding
 import br.com.cwi.nespresso_app.favorites.FavoritesActivity
 import br.com.cwi.nespresso_app.products.ProductsActivity
+import br.com.cwi.nespresso_app.products.base.BaseBottomNavigation
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class BagActivity : AppCompatActivity() {
+class BagActivity : BaseBottomNavigation() {
 
     private lateinit var binding: ActivityBagBinding
+
+    override fun bottomNavigation(): BottomNavigationView  = binding.bottomNavigation
+    override fun defaultMenuItemId(): Int = R.id.bag_menu
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,29 +24,5 @@ class BagActivity : AppCompatActivity() {
         setUpBottomNavigation()
     }
 
-    override fun onPause() {
-        super.onPause()
-        overridePendingTransition(0, 0)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        binding.bottomNavigation.selectedItemId = R.id.bag_menu
-    }
-
-    private fun setUpBottomNavigation() {
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
-
-            when (it.itemId) {
-                R.id.products_menu -> {
-                    startActivity(Intent(this, ProductsActivity::class.java))
-                }
-                R.id.favorites_menu -> {
-                    startActivity(Intent(this, FavoritesActivity::class.java))
-                }
-            }
-            return@setOnNavigationItemSelectedListener true
-        }
-    }
 
 }
