@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="coffee_size_width">136dp</dimen>
-</resources>
+        <dimen name="fab_margin">16dp</dimen>
+    </resources>

@@ -8,8 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="gray_dark">#494949</color>
+    <!-- Home -->
     <color name="coffees_color">#EDDEA5</color>
     <color name="machines_color">#DCB889</color>
     <color name="accessories_color">#F2E3C6</color>
+    <color name="gray_light">#f3f3f3</color>
+    <color name="gray_dark">#666</color>
+    <color name="gray_medium">#919191</color>
+    <color name="green">#0D9F67</color>
+
 </resources>

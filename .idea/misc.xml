@@ -5,8 +5,15 @@
       <map>
         <entry key="../../../../../../../layout/custom_preview.xml" value="0.2898148148148148" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/activity_acessories.xml" value="0.259375" />
+        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/activity_bag.xml" value="0.259375" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/activity_coffee.xml" value="0.259375" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/activity_machine.xml" value="0.2453125" />
+        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/item_accessory.xml" value="0.264" />
+        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/item_cap_category.xml" value="0.13385416666666666" />
+        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/item_category.xml" value="0.13385416666666666" />
+        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/item_coffe.xml" value="0.259375" />
+        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/item_coffee_capsule.xml" value="0.536" />
+        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/item_machine.xml" value="0.264" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.13385416666666666" />
         <entry key="app/src/main/res/layout/activity_bag.xml" value="0.21557971014492755" />
         <entry key="app/src/main/res/layout/activity_coffee.xml" value="0.26766304347826086" />

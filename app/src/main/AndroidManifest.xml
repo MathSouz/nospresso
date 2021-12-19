@@ -2,35 +2,44 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.cwi.nespresso_app">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NespressoApp">
+        android:theme="@style/Theme.Nespressoapp"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".products.acessories.AcessoriesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".products.machine.MachineActivity"
-            android:exported="false" />
-        <activity
-            android:name=".bag.BagActivity"
+            android:name=".presentation.products.accessory.AccessoriesActivity"
             android:exported="false"
-            android:label="@string/txt_bag" />
+            android:label="@string/txt_accessories_title"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".favorites.FavoritesActivity"
+            android:name=".presentation.products.machine.MachineActivity"
             android:exported="false"
-            android:label="@string/txt_favorites" />
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".products.coffee.CoffeeActivity"
-            android:exported="false" />
+            android:name=".presentation.bag.BagActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".products.ProductsActivity"
+            android:name=".presentation.favorites.FavoritesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.products.coffee.CoffeeActivity"
+            android:exported="false"
+            android:label="@string/txt_coffees_title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.products.ProductsActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.NespressoApp.NoActionBar">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Nespressoapp.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

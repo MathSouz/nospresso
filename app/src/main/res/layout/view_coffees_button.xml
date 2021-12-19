@@ -11,30 +11,27 @@
         android:id="@+id/tv_coffee_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt_coffees"
-        android:textColor="@color/gray_dark"
+        android:text="@string/txt_coffees_title"
         android:textSize="26sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv_coffee_subtitle"
+        app:layout_constraintBottom_toTopOf="@id/tv_coffee_subtitle"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_coffee_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_coffee_subtitle"
-        android:textColor="@color/gray_dark"
+        android:text="@string/txt_coffees_subtitle"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/tv_coffee_title" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="@dimen/coffee_size_width"
+        android:id="@+id/appCompatImageView"
+        android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_coffee_subtitle"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/coffees" />
 
