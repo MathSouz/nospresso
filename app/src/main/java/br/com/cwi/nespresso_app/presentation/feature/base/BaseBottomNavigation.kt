@@ -1,15 +1,14 @@
-package br.com.cwi.nespresso_app.presentation.base
+package br.com.cwi.nespresso_app.presentation.feature.base
 
 import android.content.Intent
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.cwi.nespresso_app.R
-import br.com.cwi.nespresso_app.presentation.bag.BagActivity
-import br.com.cwi.nespresso_app.presentation.favorites.FavoritesActivity
-import br.com.cwi.nespresso_app.presentation.products.ProductsActivity
+import br.com.cwi.nespresso_app.presentation.feature.bag.BagActivity
+import br.com.cwi.nespresso_app.presentation.feature.favorites.FavoritesActivity
+import br.com.cwi.nespresso_app.presentation.feature.products.ProductsActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-abstract class BaseBottomNavigationActivity : AppCompatActivity() {
+abstract class BaseBottomNavigation : AppCompatActivity() {
 
     abstract val currentTab: Int
 
@@ -20,19 +19,15 @@ abstract class BaseBottomNavigationActivity : AppCompatActivity() {
         overridePendingTransition(0, 0)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setUpBottomNavigationActions()
-    }
-
     override fun onResume() {
         super.onResume()
+        setUpBottomNavigationActions()
         selectCurrentTab()
     }
 
     private fun setUpBottomNavigationActions() {
 
-        getBottomNavigation().setOnNavigationItemSelectedListener {
+        getBottomNavigation().setOnItemSelectedListener {
             if (it.itemId != this.currentTab) when (it.itemId) {
                 R.id.products_menu -> {
                     val intent = Intent(this, ProductsActivity::class.java)
@@ -47,7 +42,7 @@ abstract class BaseBottomNavigationActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-            return@setOnNavigationItemSelectedListener true
+            return@setOnItemSelectedListener true
         }
     }
 

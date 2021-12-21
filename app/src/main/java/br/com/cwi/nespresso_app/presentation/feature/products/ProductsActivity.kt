@@ -1,14 +1,13 @@
-package br.com.cwi.nespresso_app.presentation.products
+package br.com.cwi.nespresso_app.presentation.feature.products
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
 import br.com.cwi.nespresso_app.R
-import br.com.cwi.nespresso_app.presentation.base.BaseBottomNavigation
+import br.com.cwi.nespresso_app.presentation.feature.base.BaseBottomNavigation
 import br.com.cwi.nespresso_app.databinding.ActivityProductsBinding
-import br.com.cwi.nespresso_app.presentation.products.accessory.AccessoriesActivity
-import br.com.cwi.nespresso_app.presentation.products.coffee.CoffeeActivity
-import br.com.cwi.nespresso_app.presentation.products.machine.MachineActivity
+import br.com.cwi.nespresso_app.presentation.feature.products.accessory.AccessoriesActivity
+import br.com.cwi.nespresso_app.presentation.feature.products.coffee.CoffeeActivity
+import br.com.cwi.nespresso_app.presentation.feature.products.machine.MachineActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ProductsActivity : BaseBottomNavigation() {

@@ -1,8 +1,8 @@
-package br.com.cwi.nespresso_app.presentation.favorites
+package br.com.cwi.nespresso_app.presentation.feature.favorites
 
 import android.os.Bundle
 import br.com.cwi.nespresso_app.R
-import br.com.cwi.nespresso_app.presentation.base.BaseBottomNavigation
+import br.com.cwi.nespresso_app.presentation.feature.base.BaseBottomNavigation
 import br.com.cwi.nespresso_app.databinding.ActivityFavoritesBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
