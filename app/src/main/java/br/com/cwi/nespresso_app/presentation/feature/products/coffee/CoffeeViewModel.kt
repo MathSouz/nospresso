@@ -7,12 +7,12 @@ import br.com.cwi.nespresso_app.domain.entity.CoffeeCategory
 import br.com.cwi.nespresso_app.domain.entity.Type
 import br.com.cwi.nespresso_app.domain.repository.CoffeeRepository
 import br.com.cwi.nespresso_app.presentation.feature.base.BaseViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class CoffeeViewModel : BaseViewModel() {
+class CoffeeViewModel(private val repository: CoffeeRepository) : BaseViewModel() {
+
     private val _coffees = MutableLiveData<List<Type>>()
     val coffees: LiveData<List<Type>> = _coffees
-
-    private val repository: CoffeeRepository = CoffeeRepositoryImpl()
 
     fun fetchCoffees() {
         launch {

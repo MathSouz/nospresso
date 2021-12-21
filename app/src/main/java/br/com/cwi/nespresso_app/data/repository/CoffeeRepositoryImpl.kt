@@ -12,9 +12,9 @@ import br.com.cwi.nespresso_app.domain.repository.CoffeeRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class CoffeeRepositoryImpl : CoffeeRepository {
-
-    private val api: NespressoApi = RetrofitConfig.service
+class CoffeeRepositoryImpl(
+    private val api: NespressoApi
+) : CoffeeRepository {
 
     override suspend fun getCoffees(): List<CoffeeCategory> {
         return withContext(Dispatchers.IO) { CategoryMapper().toDomain(api.getCoffees()) }

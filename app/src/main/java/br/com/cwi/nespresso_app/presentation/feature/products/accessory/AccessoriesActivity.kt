@@ -3,21 +3,16 @@ package br.com.cwi.nespresso_app.presentation.feature.products.accessory
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import br.com.cwi.nespresso_app.R
-import br.com.cwi.nespresso_app.data.repository.CoffeeRepositoryImpl
 import br.com.cwi.nespresso_app.databinding.ActivityAcessoriesBinding
-import br.com.cwi.nespresso_app.domain.entity.Type
 import br.com.cwi.nespresso_app.presentation.extension.visibleOrGone
 import br.com.cwi.nespresso_app.presentation.feature.base.BaseBottomNavigation
-import br.com.cwi.nespresso_app.presentation.feature.products.coffee.CapsulesAdapter
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AccessoriesActivity : BaseBottomNavigation() {
 
     private lateinit var binding: ActivityAcessoriesBinding
 
-    private val viewModel = AccessoriesViewModel()
+    private val viewModel : AccessoriesViewModel by viewModel()
 
     override val currentTab: Int = R.id.products_menu
 

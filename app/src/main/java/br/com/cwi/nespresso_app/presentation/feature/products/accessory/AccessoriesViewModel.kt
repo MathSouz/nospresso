@@ -9,12 +9,10 @@ import br.com.cwi.nespresso_app.domain.entity.Type
 import br.com.cwi.nespresso_app.domain.repository.CoffeeRepository
 import br.com.cwi.nespresso_app.presentation.feature.base.BaseViewModel
 
-class AccessoriesViewModel : BaseViewModel() {
+class AccessoriesViewModel(private val repository : CoffeeRepository) : BaseViewModel() {
 
     private val _accessories = MutableLiveData<List<Type>>()
     val accessories : LiveData<List<Type>> = _accessories
-
-    private val repository : CoffeeRepository = CoffeeRepositoryImpl()
 
     fun fetchAccessories() {
         launch {

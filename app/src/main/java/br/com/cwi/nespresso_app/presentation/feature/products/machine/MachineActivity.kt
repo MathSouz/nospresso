@@ -1,19 +1,18 @@
 package br.com.cwi.nespresso_app.presentation.feature.products.machine
 
 import android.os.Bundle
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.cwi.nespresso_app.R
 import br.com.cwi.nespresso_app.databinding.ActivityMachineBinding
 import br.com.cwi.nespresso_app.presentation.extension.visibleOrGone
 import br.com.cwi.nespresso_app.presentation.feature.base.BaseBottomNavigation
-import br.com.cwi.nespresso_app.presentation.feature.products.coffee.CapsulesAdapter
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MachineActivity : BaseBottomNavigation() {
 
     private lateinit var binding: ActivityMachineBinding
 
-    private val viewModel = MachineViewModel()
+    private val viewModel : MachineViewModel by viewModel()
 
     override val currentTab: Int = R.id.products_menu
 
@@ -22,7 +21,6 @@ class MachineActivity : BaseBottomNavigation() {
         binding = ActivityMachineBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         setUpViewModel()
     }
 
@@ -37,10 +35,6 @@ class MachineActivity : BaseBottomNavigation() {
 
         viewModel.machines.observe(this@MachineActivity) { list ->
             val recyclerView = binding.rvMachines
-
-            recyclerView.addItemDecoration(
-                DividerItemDecoration(this@MachineActivity, DividerItemDecoration.VERTICAL)
-            )
 
             recyclerView.adapter = MachineAdapter(this@MachineActivity, list)
             recyclerView.layoutManager = GridLayoutManager(this, 2)
