@@ -19,5 +19,6 @@
     <string name="txt_error_title">Opss, algo deu errado</string>
     <string name="txt_try_again">Tente novamente mais tarde</string>
     <string name="txt_put_in_basket">Adicionar à sacola</string>
+    <string name="txt_intensity_formatted">Intensidade: %1$d</string>
 
 </resources>
