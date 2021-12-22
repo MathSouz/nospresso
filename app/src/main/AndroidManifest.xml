@@ -25,14 +25,17 @@
         <activity
             android:name=".presentation.feature.products.machine.MachineActivity"
             android:exported="false"
+            android:label="@string/txt_machines_title"
             android:screenOrientation="portrait" />
         <activity
             android:name=".presentation.feature.bag.BagActivity"
             android:exported="false"
+            android:label="@string/txt_bag"
             android:screenOrientation="portrait" />
         <activity
             android:name=".presentation.feature.favorites.FavoritesActivity"
             android:exported="false"
+            android:label="@string/txt_favorites"
             android:screenOrientation="portrait" />
         <activity
             android:name=".presentation.feature.products.coffee.CoffeeActivity"
