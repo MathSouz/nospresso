@@ -2,7 +2,7 @@ package br.com.cwi.nespresso_app.data.entity.coffee
 
 import com.squareup.moshi.Json
 
-data class CoffeeResponse(
+data class DetailedCoffeeResponse(
     @Json(name = "id") val id: Int,
     @Json(name = "nome") val name: String,
     @Json(name = "descricao") val description: String,
@@ -10,7 +10,7 @@ data class CoffeeResponse(
     @Json(name = "precoUnitario") val unitPrice: Double,
     @Json(name = "imagem") val urlImage: String,
     @Json(name = "medidas") val measures: List<String>,
-    @Json(name = "origem") val origin: String?,
-    @Json(name = "torrefacao") val roasting: String?,
-    @Json(name = "perfilAromatico") val profile: String?,
-): CapsuleType(type = 1)
+    @Json(name = "origem") val origin: String,
+    @Json(name = "torrefacao") val roasting: String,
+    @Json(name = "perfilAromatico") val profile: String,
+)

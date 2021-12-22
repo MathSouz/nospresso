@@ -26,6 +26,7 @@ class MachineAdapter(val context: Context, private val list: List<Machine>) :
             list[position].let { machine ->
                 tvName.text = machine.name
                 tvPrice.text = machine.unitPrice.toMoneyFormat(0)
+                
 
                 Glide.with(context).load(machine.urlImage).into(ivMachine)
             }

@@ -42,7 +42,8 @@ class CapsulesAdapter(val context: Context, private val list: List<Type>) : Recy
         } else {
 
             item as Coffee
-            (viewHolder as CapsuleViewHolder).bind(context, item)
+            val holder = (viewHolder as CapsuleViewHolder)
+            holder.bind(context, item)
 
         }
     }

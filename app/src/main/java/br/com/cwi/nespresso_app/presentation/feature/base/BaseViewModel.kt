@@ -21,6 +21,7 @@ abstract class BaseViewModel : ViewModel() {
                 block()
                 _error.postValue(false)
             } catch (ex: Exception) {
+                ex.printStackTrace()
                 _error.postValue(true)
             }
 
