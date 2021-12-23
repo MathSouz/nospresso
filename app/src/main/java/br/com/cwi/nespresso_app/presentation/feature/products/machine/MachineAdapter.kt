@@ -2,14 +2,11 @@ package br.com.cwi.nespresso_app.presentation.feature.products.machine
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import br.com.cwi.nespresso_app.R
-import br.com.cwi.nespresso_app.base.toMoneyFormat
-import br.com.cwi.nespresso_app.databinding.ItemMachineBinding
 import br.com.cwi.nespresso_app.domain.entity.Machine
+import br.com.cwi.nespresso_app.presentation.extension.toMoneyFormat
 import br.com.cwi.nespresso_app.presentation.feature.products.machine.viewHolder.MachineViewHolder
 import com.bumptech.glide.Glide
 

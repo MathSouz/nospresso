@@ -56,12 +56,14 @@ class DetailedCoffeeActivity : AppCompatActivity() {
 
         binding.tvDescription.text = it.description
         binding.tvRoasting.text = it.roasting
-        binding.tvIntensity.text = getString(R.string.txt_intensity, it.intensity)
         binding.tvPrice.text = it.unitPrice.toMoneyFormat()
         binding.tvOrigin.text = it.origin
         binding.tvProfile.text = it.profile
         it.intensity?.let { intensity ->
             binding.lpiIntensity.progress = ((intensity.toDouble() / maxIntensity.toDouble()) * 100.0).toInt()
+            binding.tvIntensity.text = getString(R.string.txt_intensity, intensity)
+            binding.lpiIntensity.visibleOrGone(true)
+            binding.tvIntensity.visibleOrGone(true)
         }
 
         Glide.with(this).load(it.urlImage).into(binding.ivCoffee)

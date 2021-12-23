@@ -33,9 +33,9 @@ class CoffeeRepositoryImpl(
         }
     }
 
-    override suspend fun getDetailedCoffee(): List<DetailedCoffee> {
+    override suspend fun getDetailedCoffee(id : Int): DetailedCoffee {
         return withContext(Dispatchers.IO) {
-            DetailedCoffeeMapper().toDomain(api.getDetailedCoffee())
+            DetailedCoffeeMapper().toDomain(api.getDetailedCoffee(id))
         }
     }
 }

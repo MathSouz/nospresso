@@ -6,6 +6,7 @@ import br.com.cwi.nespresso_app.data.entity.coffee.CoffeeResponse
 import br.com.cwi.nespresso_app.data.entity.coffee.DetailedCoffeeResponse
 import br.com.cwi.nespresso_app.data.entity.machine.MachineResponse
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface NespressoApi {
 
@@ -18,6 +19,6 @@ interface NespressoApi {
     @GET("/acessorios")
     suspend fun getAccessories(): List<AccessoryCategoryResponse>
 
-    @GET("/cafes")
-    suspend fun getDetailedCoffee() : List<DetailedCoffeeResponse>
+    @GET("/cafes/{id}")
+    suspend fun getDetailedCoffee(@Path("id") id : Int) : DetailedCoffeeResponse
 }

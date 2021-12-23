@@ -41,7 +41,9 @@ class CoffeeActivity : BaseBottomNavigation() {
                 DividerItemDecoration(this@CoffeeActivity, DividerItemDecoration.VERTICAL)
             )
 
-            recyclerView.adapter = CapsulesAdapter(this@CoffeeActivity, list)
+            recyclerView.adapter = CapsulesAdapter(this@CoffeeActivity, list) {
+                viewModel.setFavorite(it)
+            }
         }
 
         viewModel.loading.observe(this@CoffeeActivity, {

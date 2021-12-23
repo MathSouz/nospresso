@@ -7,7 +7,8 @@ class Coffee(
     unitPrice: Double,
     var description: String,
     var intensity: Int?,
-    var measures: List<String>
+    var measures: List<String>,
+    var favorite: Boolean = false
 ): Product(
     id,
     name,

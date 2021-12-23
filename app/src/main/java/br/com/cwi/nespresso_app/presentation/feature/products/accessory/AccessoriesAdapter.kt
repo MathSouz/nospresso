@@ -2,14 +2,10 @@ package br.com.cwi.nespresso_app.presentation.feature.products.accessory
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import br.com.cwi.nespresso_app.R
-import br.com.cwi.nespresso_app.base.toMoneyFormat
-import br.com.cwi.nespresso_app.databinding.ItemAccessoryBinding
-import br.com.cwi.nespresso_app.databinding.ItemCapCategoryBinding
 import br.com.cwi.nespresso_app.domain.entity.Accessory
 import br.com.cwi.nespresso_app.domain.entity.AccessoryCategory
 import br.com.cwi.nespresso_app.domain.entity.ItemType
@@ -17,7 +13,6 @@ import br.com.cwi.nespresso_app.domain.entity.Type
 import br.com.cwi.nespresso_app.presentation.feature.products.accessory.viewHolder.AccessoryCategoryViewHolder
 import br.com.cwi.nespresso_app.presentation.feature.products.accessory.viewHolder.AccessoryViewHolder
 import br.com.cwi.nespresso_app.presentation.feature.products.coffee.VIEW_TYPE_CATEGORY
-import com.bumptech.glide.Glide
 
 class AccessoriesAdapter(val context: Context, private val list: List<Type>) :
     RecyclerView.Adapter<ViewHolder>() {

@@ -10,5 +10,5 @@ interface CoffeeRepository {
     suspend fun getCoffees(): List<CoffeeCategory>
     suspend fun getMachines(): List<Machine>
     suspend fun getAccessories(): List<AccessoryCategory>
-    suspend fun getDetailedCoffee(): List<DetailedCoffee>
+    suspend fun getDetailedCoffee(id : Int): DetailedCoffee
 }

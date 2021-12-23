@@ -13,7 +13,7 @@ class DetailedCoffeeViewModel(private val repository: CoffeeRepository) : BaseVi
 
     fun fetchDetailedCoffees(id : Int) {
         launch {
-            val categoryList = repository.getDetailedCoffee().find { it.id == id }
+            val categoryList = repository.getDetailedCoffee(id)
             _coffees.postValue(categoryList)
         }
     }

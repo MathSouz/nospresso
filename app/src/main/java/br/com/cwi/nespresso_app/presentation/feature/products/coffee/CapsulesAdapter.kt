@@ -15,7 +15,10 @@ import br.com.cwi.nespresso_app.presentation.feature.products.coffee.viewHolder.
 
 const val VIEW_TYPE_CATEGORY = 0
 
-class CapsulesAdapter(val context: Context, private val list: List<Type>) : RecyclerView.Adapter<ViewHolder>() {
+class CapsulesAdapter(val context: Context,
+                      private val list: List<Type>,
+                      private val onFavoriteClick: (Coffee) -> Unit
+) : RecyclerView.Adapter<ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return if (viewType == ItemType.CATEGORY.value) {
@@ -26,8 +29,7 @@ class CapsulesAdapter(val context: Context, private val list: List<Type>) : Recy
         } else {
 
             val view = inflateView(R.layout.item_coffee_capsule, parent)
-            CapsuleViewHolder(view)
-
+            CapsuleViewHolder(view, onFavoriteClick)
         }
     }
 
@@ -43,8 +45,7 @@ class CapsulesAdapter(val context: Context, private val list: List<Type>) : Recy
 
             item as Coffee
             val holder = (viewHolder as CapsuleViewHolder)
-            holder.bind(context, item)
-
+            holder.bind(item)
         }
     }
 
