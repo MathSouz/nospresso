@@ -6,7 +6,7 @@ import br.com.cwi.nespresso_app.R
 import br.com.cwi.nespresso_app.presentation.feature.base.BaseBottomNavigation
 import br.com.cwi.nespresso_app.databinding.ActivityProductsBinding
 import br.com.cwi.nespresso_app.presentation.feature.products.accessory.AccessoriesActivity
-import br.com.cwi.nespresso_app.presentation.feature.products.coffee.CoffeeActivity
+import br.com.cwi.nespresso_app.presentation.feature.products.coffee.CoffeeHostActivity
 import br.com.cwi.nespresso_app.presentation.feature.products.machine.MachineActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -28,7 +28,7 @@ class ProductsActivity : BaseBottomNavigation() {
 
     private fun setUpProductActions() {
         binding.contentCoffees.root.setOnClickListener {
-            val intent = Intent(this, CoffeeActivity::class.java)
+            val intent = Intent(this, CoffeeHostActivity::class.java)
             startActivity(intent)
         }
 
@@ -42,5 +42,4 @@ class ProductsActivity : BaseBottomNavigation() {
             startActivity(intent)
         }
     }
-
 }

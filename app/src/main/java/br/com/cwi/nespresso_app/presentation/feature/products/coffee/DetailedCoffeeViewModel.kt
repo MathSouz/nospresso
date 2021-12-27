@@ -1,4 +1,4 @@
-package br.com.cwi.nespresso_app.presentation.feature.products.coffeeInfo
+package br.com.cwi.nespresso_app.presentation.feature.products.coffee
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

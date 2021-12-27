@@ -5,11 +5,9 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cwi.nespresso_app.R
-import br.com.cwi.nespresso_app.databinding.ActivityCoffeeBinding
 import br.com.cwi.nespresso_app.presentation.feature.base.BaseBottomNavigation
 import br.com.cwi.nespresso_app.databinding.ActivityFavoritesBinding
 import br.com.cwi.nespresso_app.presentation.extension.visibleOrGone
-import br.com.cwi.nespresso_app.presentation.feature.products.coffee.CoffeeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

@@ -8,12 +8,13 @@ import br.com.cwi.nespresso_app.R
 import br.com.cwi.nespresso_app.databinding.ItemCoffeeCapsuleBinding
 import br.com.cwi.nespresso_app.domain.entity.Coffee
 import br.com.cwi.nespresso_app.presentation.extension.toMoneyFormat
-import br.com.cwi.nespresso_app.presentation.feature.products.coffeeInfo.DetailedCoffeeActivity
 import com.bumptech.glide.Glide
 
 class CapsuleViewHolder(
     itemView: View,
-    private val onFavoriteClick: (Coffee) -> Unit) : RecyclerView.ViewHolder(itemView) {
+    private val onFavoriteClick: (Coffee) -> Unit,
+    private val onItemClick : (Coffee) -> Unit) : RecyclerView.ViewHolder(itemView) {
+
     private val tvTitle = ItemCoffeeCapsuleBinding.bind(itemView).tvCapsuleTitle
     private val tvSubtitle = ItemCoffeeCapsuleBinding.bind(itemView).tvCapsuleSubtitle
     private val ivImage = ItemCoffeeCapsuleBinding.bind(itemView).ivCapsuleImage
@@ -29,11 +30,7 @@ class CapsuleViewHolder(
         tvIntensity.text = context.getString(R.string.txt_intensity, item.intensity)
         tvPrice.text = item.unitPrice.toMoneyFormat()
 
-        root.setOnClickListener {
-            val coffeeInfoIntent = Intent(context, DetailedCoffeeActivity::class.java)
-            coffeeInfoIntent.putExtra("id", item.id)
-            context.startActivity(coffeeInfoIntent)
-        }
+        root.setOnClickListener { onItemClick(item) }
 
         with(ivFavorite) {
 
