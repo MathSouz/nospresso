@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProductItemConstraintLayout" >
+        <attr name="component_product_item_menu_title" format="reference"/>
+        <attr name="component_product_item_menu_subtitle" format="reference"/>
+        <attr name="component_product_item_menu_image" format="reference"/>
+    </declare-styleable>
+</resources>

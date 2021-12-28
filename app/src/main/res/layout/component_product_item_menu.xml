@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/accessories_color"
     android:foreground="?android:attr/selectableItemBackground"
-    android:padding="26dp">
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_product_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt_accessories_title"
+        tools:text="@string/txt_accessories_title"
         android:textSize="26sp"
+        android:layout_marginStart="26dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/tv_product_subtitle"
         app:layout_constraintStart_toStartOf="parent" />
@@ -22,17 +22,20 @@
         android:id="@+id/tv_product_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt_accessories_subtitle"
+        tools:text="@string/txt_accessories_subtitle"
+        android:layout_marginBottom="26dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tv_product_title" />
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_product_image"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cups" />
+        tools:srcCompat="@drawable/cups" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

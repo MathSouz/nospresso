@@ -27,17 +27,17 @@ class ProductsActivity : BaseBottomNavigation() {
     override fun getBottomNavigation(): BottomNavigationView = binding.bottomNavigation
 
     private fun setUpProductActions() {
-        binding.contentCoffees.root.setOnClickListener {
+        binding.contentCoffees.setOnClickListener {
             val intent = Intent(this, CoffeeHostActivity::class.java)
             startActivity(intent)
         }
 
-        binding.contentMachines.root.setOnClickListener {
+        binding.contentMachines.setOnClickListener {
             val intent = Intent(this, MachineActivity::class.java)
             startActivity(intent)
         }
 
-        binding.contentAccessories.root.setOnClickListener {
+        binding.contentAccessories.setOnClickListener {
             val intent = Intent(this, AccessoriesActivity::class.java)
             startActivity(intent)
         }

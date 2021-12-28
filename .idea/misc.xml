@@ -13,7 +13,8 @@
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/activity_favorites.xml" value="0.152" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/activity_machine.xml" value="0.259375" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/activity_machine_host.xml" value="0.259375" />
-        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/activity_products.xml" value="0.259375" />
+        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/activity_products.xml" value="0.176" />
+        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/component_product_item_menu.xml" value="0.259375" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/fragment_coffee.xml" value="0.259375" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/fragment_coffee_detail.xml" value="0.259375" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/item_accessory.xml" value="0.264" />
@@ -24,6 +25,7 @@
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/item_coffee_capsule.xml" value="0.536" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/item_favorite.xml" value="0.264" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/item_machine.xml" value="0.264" />
+        <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/view_accessories_button.xml" value="0.259375" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/view_coffees_button.xml" value="0.259375" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/view_error.xml" value="0.264" />
         <entry key="..\:/Users/tedar/Documents/CWI/nospresso/app/src/main/res/layout/view_loading.xml" value="0.259375" />

@@ -6,32 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".presentation.feature.products.ProductsActivity">
 
-    <include
+    <br.com.cwi.nespresso_app.presentation.component.ProductItemConstraintLayout
         android:id="@+id/content_coffees"
-        layout="@layout/view_coffees_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:component_product_item_menu_title="@string/txt_coffees_title"
+        app:component_product_item_menu_subtitle="@string/txt_coffees_subtitle"
+        app:component_product_item_menu_image="@drawable/coffees"
+        android:background="@color/coffees_color"
         app:layout_constraintBottom_toTopOf="@id/content_machines"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <include
+    <br.com.cwi.nespresso_app.presentation.component.ProductItemConstraintLayout
         android:id="@+id/content_machines"
-        layout="@layout/view_machines_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:component_product_item_menu_title="@string/txt_machines_title"
+        app:component_product_item_menu_subtitle="@string/txt_machines_subtitle"
+        app:component_product_item_menu_image="@drawable/machines"
+        android:background="@color/machines_color"
         app:layout_constraintBottom_toTopOf="@id/content_accessories"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content_coffees" />
 
-    <include
+    <br.com.cwi.nespresso_app.presentation.component.ProductItemConstraintLayout
         android:id="@+id/content_accessories"
-        layout="@layout/view_accessories_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:padding="26dp"
+        app:component_product_item_menu_title="@string/txt_accessories_title"
+        app:component_product_item_menu_subtitle="@string/txt_accessories_subtitle"
+        app:component_product_item_menu_image="@drawable/cups"
+        android:background="@color/accessories_color"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
